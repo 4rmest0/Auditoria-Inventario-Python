@@ -1,10 +1,24 @@
-# Auditoria-Inventario-Python
-Desarrollo de un script automatizado en Python para auditar y limpiar registros de servidores (Asset Management), un control fundamental en entornos Cloud y Ciberseguridad.
+# 🛡️ Automatizador de Auditoría y Sanitización de Inventario IT
 
-El proyecto resuelve el problema de procesar archivos generados automáticamente con formatos irregulares o corruptos, asegurando la integridad de los datos antes de su análisis.
+## 📝 Descripción del Proyecto
+Este proyecto es un script de Python diseñado para entornos de **Ciberseguridad y Cloud Computing**. Actúa como un pipeline de ETL (Extract, Transform, Load) que procesa, limpia y valida archivos de inventario de servidores generados automáticamente, los cuales suelen contener formatos irregulares o datos corruptos.
 
-Extracción y Transformación (ETL): Implementación de funciones modulares para leer archivos planos, homogeneizar separadores y normalizar datos inconsistentes (manejo de mayúsculas, espacios y campos vacíos).
+Garantizar que los datos del inventario (Asset Management) sean correctos es el primer paso crítico para cualquier auditoría de seguridad o despliegue de infraestructura automatizada (IaC).
 
-Validación de Integridad: Desarrollo de algoritmos personalizados para la validación estricta de direcciones IPv4 y sistemas operativos autorizados, descartando y registrando entradas maliciosas o erróneas.
+## 🚀 Características Principales (Features)
+* **Extracción y Normalización:** Procesa archivos de texto plano línea a línea, unificando separadores inconsistentes (`,` o `;`) y eliminando espacios residuales.
+* **Manejo de Excepciones:** El script está protegido contra fallos de lectura (ej. archivo no encontrado) mediante bloques `try-except`.
+* **Validación de Integridad:** * Comprueba que los campos obligatorios (como el nombre del servidor) no estén vacíos.
+  * Valida estrictamente el formato de las **direcciones IPv4**.
+  * Asegura que los sistemas operativos pertenezcan a una lista blanca (Linux, Windows, MacOS).
+* **Generación de Reportes:** Exporta los datos validados y genera un archivo de auditoría (`informe_servidores.txt`) detallando las métricas de éxito, los errores encontrados y las IPs únicas.
 
-Generación de Reportes: Automatización del volcado de datos limpios y creación de un informe de auditoría detallando métricas de éxito, control de errores y conteo de IPs/Responsables únicos utilizando estructuras de datos eficientes (Sets y Diccionarios).
+## 🛠️ Tecnologías y Conceptos Utilizados
+* **Lenguaje:** Python 3
+* **Estructuras de datos:** Diccionarios, Listas y Sets.
+* **Conceptos:** File I/O, Data Cleansing, Algoritmos de validación, Modularidad (Funciones).
+
+## ⚙️ Cómo ejecutar el proyecto
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone [https://github.com/4rmest0/Auditoria-Inventario-Python.git](https://github.com/TU_USUARIO/TU_REPOSITORIO.git)
